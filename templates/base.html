@@ -1,0 +1,29 @@
+<html>
+<head>
+    {% if title %}
+    <title>{{ title }} - What's Trending?</title>
+    {% else %}
+    <title>What's Trending?</title>
+    {% endif %}
+
+    <style>
+        body {
+            background-color: #d7d2d2;
+        }
+        div.plots {
+            margin: 5px;
+            padding: 5px;
+            height: auto;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+{% if not noHomePageLink %}
+<div><a href="{{ url_for('home') }}">Home Page</a></div>
+<hr/>
+{% endif %}
+
+{% block content %} {% endblock %}
+</body>
+</html>

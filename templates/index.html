@@ -1,0 +1,12 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<div><h2> Please select a Country to view Youtube trending results</h2></div>
+<div>
+    <li><a href="{{ url_for('usTrend_func') }}">United States of America</a></li>
+    <li><a href="{{ url_for('canadaTrend_func') }}">Canada</a></li>
+</div>
+
+
+{% endblock %}
