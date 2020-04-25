@@ -1,12 +1,69 @@
-<!-- extend base layout -->
 {% extends "base.html" %}
-
 {% block content %}
-<div><h2> Please select a Country to view Youtube trending results</h2></div>
-<div>
-    <li><a href="{{ url_for('usTrend_func') }}">United States of America</a></li>
-    <li><a href="{{ url_for('canadaTrend_func') }}">Canada</a></li>
+<div class="container">
+</br>
+<h2 align="center">
+    What's trending is intended to help Youtubers in different regions of the country visualize what type of content is the most popular in their country.
+    Our team will acquire data from the top trending Youtube videos from different countries to form visual statistics of what category is the most viewed video.
+</h2>
+    <br/>
+    <br/>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+            <a href="{{ url_for('usTrend_func') }}" style="font-size:larger">
+            <img src="/static/1.png" class="img-responsive" style="width:100%" alt="Image">
+            </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+            <a href="{{ url_for('indiaTrend_func') }}">
+                <img src="/static/5.png" class="img-responsive" style="width:100%" alt="Image">
+            </a>
+        </div>
+      </div>
+    </div>
+ </div>
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+            <a href="{{ url_for('canadaTrend_func') }}" style="font-size:larger">
+            <img src="/static/2.png" class="img-responsive" style="width:100%" alt="Image">
+            </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+            <a href="{{ url_for('mexicoTrend_func') }}">
+                <img src="/static/4.png" class="img-responsive" style="width:100%" alt="Image">
+            </a>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel" align="center">
+            <div class="panel-body">
+                <a href="{{ url_for('koreaTrend_func') }}">
+                    <img src="/static/3.png" class="img-responsive" style="width:100%" alt="Image">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div><br><br>
 
 
 {% endblock %}

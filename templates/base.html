@@ -1,29 +1,28 @@
-<html>
-<head>
-    {% if title %}
+{% extends "bootstrap/base.html" %}
+{% if title %}
     <title>{{ title }} - What's Trending?</title>
-    {% else %}
+{% else %}
     <title>What's Trending?</title>
-    {% endif %}
-
-    <style>
-        body {
-            background-color: #d7d2d2;
-        }
-        div.plots {
-            margin: 5px;
-            padding: 5px;
-            height: auto;
-            display: inline-block;
-        }
-    </style>
-</head>
-<body>
-{% if not noHomePageLink %}
-<div><a href="{{ url_for('home') }}">Home Page</a></div>
-<hr/>
 {% endif %}
 
-{% block content %} {% endblock %}
-</body>
-</html>
+{% block styles -%}
+    {{super()}}  {# do not forget to call super or Bootstrap's own stylesheets
+                    will disappear! #}
+    <link rel="stylesheet" type="text/css"
+          href="{{url_for('static', filename='bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="{{url_for('static', filename='style.css')}}">
+{% endblock %}
+
+{% block navbar %}
+<div class="container">
+   <nav class="navbar">
+       <div class="jumbotron text-center" style="background: tomato; color: white">
+           <h1>
+               <span class="glyphicon glyphicon-expand" aria-hidden="true" style="top:5px"></span>
+               What's Trending
+           </h1>
+       </div>
+   </nav>
+</div>
+{% endblock %}
