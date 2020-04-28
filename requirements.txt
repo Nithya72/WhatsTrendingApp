@@ -1,0 +1,9 @@
+flask
+flask_bootstrap
+jinja2 
+matplotlib 
+mpld3
+numpy
+pandas
+seaborn
+scipy
