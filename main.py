@@ -35,9 +35,8 @@ def mexicoTrend_func():
 def koreaTrend_func():
     return render_template("Korea.html", title="Korea")
 
-
-
 if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True, port=80)
     app.jinja_env.auto_reload = True
     app.run(debug=True)
     app.config(TEMPLATES_AUTO_RELOAD=True)
