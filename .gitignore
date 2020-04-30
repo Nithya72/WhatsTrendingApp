@@ -1,2 +1,8 @@
+.DS_Store
 .idea/
-**/.vscode
+.vscode/
+__pycache__/
+plot/__pycache__/graphs.cpython-37.pyc
+plot/graphs.py
+
+
