@@ -2,6 +2,7 @@ from flask import Flask, send_file, render_template
 from plot import usaTrending
 from plot import indTrending
 from flask_bootstrap import Bootstrap
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -24,6 +25,12 @@ def usTrend_func():
 def canadaTrend_func():
     return render_template("Canada.html", title="Canada")
 
+@app.route('/video_id', methods=['POST'])
+def video_id():
+    videoID = request.form['videoId']
+    html_text = [indTrending.get_videoid(videoID)]
+    return render_template("India.html", title="United States", graph=html_text)
+
 
 @app.route("/indiaTrend")
 def indiaTrend_func():
@@ -39,7 +46,6 @@ def mexicoTrend_func():
 @app.route("/koreaTrend")
 def koreaTrend_func():
     return render_template("Korea.html", title="Korea")
-
 
 
 if __name__ == '__main__':
