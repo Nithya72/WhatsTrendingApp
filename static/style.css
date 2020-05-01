@@ -2,3 +2,15 @@
     background: tomato;
     color: white;
 }
+
+div.plots-cloud .mpld3-yaxis, div.plots-cloud .mpld3-xaxis {
+    display: none;
+}
+
+div.plots-cloud .mpld3-yaxis {
+    display: none;
+}
+
+div.plots-cloud .mpld3-yaxis{
+    display: none;
+}

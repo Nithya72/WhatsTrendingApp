@@ -1,5 +1,6 @@
 from flask import Flask, send_file, render_template
 from plot import usaTrending
+from plot import indTrending
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
@@ -13,7 +14,10 @@ def home():
 
 @app.route("/usTrend")
 def usTrend_func():
-    html_text = [usaTrending.plot_category(), usaTrending.plot_publish_hours(), usaTrending.plot_tags(), usaTrending.plot_tags_word_cloud()]
+    html_text = [[usaTrending.plot_category(), "cat"],
+                 [usaTrending.plot_publish_hours(), "hrs"],
+                 [usaTrending.plot_tags(), "tag"],
+                 [usaTrending.plot_tags_word_cloud(), "cloud"]]
     return render_template("US.html", title="United States", graph=html_text)
 
 @app.route("/canadaTrend")
@@ -23,7 +27,8 @@ def canadaTrend_func():
 
 @app.route("/indiaTrend")
 def indiaTrend_func():
-    return render_template("India.html", title="India")
+    html_text = [indTrending.plot_senti()]
+    return render_template("India.html", title="India", graph=html_text)
 
 
 @app.route("/mexicoTrend")

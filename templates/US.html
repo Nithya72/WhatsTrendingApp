@@ -4,8 +4,8 @@
 {% block content %}
 <div><h2>US - Youtube Trending Results</h2></div>
 {% for elem in graph %}
-<div class="plots">
-    {{elem|safe}}
+<div class="plots-{{elem[1]}}">
+    {{elem[0]|safe}}
 </div>
 {% endfor %}
 

@@ -39,13 +39,6 @@ def plot_tags():
     plt.ylabel("Trending Level")
     return mpld3.fig_to_html(fig)
 
-# def plot_subscribers():
-#     fig = plt.figure()
-#     sums = df.groupby(df["title_y"])["subscriber"].sum()
-#     axis('equal')
-#     plt.pie(sums, autopct='%.2f')
-#     return mpld3.fig_to_html(fig)
-
 def plot_tags_word_cloud():
     plt.axis('off')
     fig = plt.figure(figsize=(8, 8))
@@ -54,4 +47,15 @@ def plot_tags_word_cloud():
     wordcloud = WordCloud( background_color= 'black', stopwords = stopwords, max_words = 1000, max_font_size = 120, random_state = 42).generate(str(df['tags']))
     plt.imshow(wordcloud)
     plt.title('Word Cloud for Tags', fontsize = 20)
+    # print("Done!")
     return mpld3.fig_to_html(fig)
+
+
+# def scatterplot():
+#     fig = plt.figure()
+#     corrolation_list = ['views', 'likes', 'dislikes', 'comment_count']
+#     hm_data = df[corrolation_list].corr()
+#     matplotlib.pyplot.figure(figsize=(5,5))
+#     sb.scatterplot(x=df['views'], y=df['likes'])
+#     # byte_op = convertToBytesImage(fig)
+#     return mpld3.fig_to_html(fig)

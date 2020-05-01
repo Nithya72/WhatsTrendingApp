@@ -1,3 +1,5 @@
+# Reference from - https://medium.com/@yuhuiluo/automating-youtube-comment-sentiment-analysis-b4e2969eb62f
+
 import httplib2
 import os
 
@@ -10,7 +12,7 @@ from oauth2client.client import flow_from_clientsecrets
 from oauth2client.file import Storage
 from oauth2client.tools import argparser, run_flow
 
-CLIENT_SECRETS_FILE = "client_secret1.json"
+CLIENT_SECRETS_FILE = "client_secrets.json"
 
 YOUTUBE_READ_WRITE_SSL_SCOPE = "https://www.googleapis.com/auth/youtube.force-ssl"
 YOUTUBE_API_SERVICE_NAME = "youtube"
@@ -31,7 +33,7 @@ https://developers.google.com/api-client-library/python/guide/aaa_client_secrets
 def get_authenticated_service(args):
     flow = flow_from_clientsecrets(CLIENT_SECRETS_FILE, scope=YOUTUBE_READ_WRITE_SSL_SCOPE, message=MISSING_CLIENT_SECRETS_MESSAGE)
 
-    storage = Storage("main2.py-oauth2.json")
+    storage = Storage("main.py-oauth2.json")
     credentials = storage.get()
 
     if credentials is None or credentials.invalid:
