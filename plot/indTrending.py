@@ -24,14 +24,13 @@ def plot_senti():
         else:
             neutral = neutral + 1;
 
-    names = ["positive", "negtaive", "neutral"]
+    names = ["Positive", "Negtaive", "Neutral"]
     values = [positive, negative, neutral]
 
     fig, ax = plt.subplots()
-    explode = (0.1, 0, 1)
+    explode = (0, 0.01, 0)
     ax.pie(values, labels=names, autopct='%1.0f%%', explode=explode,
-           shadow=False, startangle=0,
-           pctdistance=1.2, labeldistance=1.4)
+           shadow=False, startangle=0, labeldistance=1.2)
     ax.axis('equal')
     return mpld3.fig_to_html(fig)
 #
