@@ -11,59 +11,39 @@
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="panel">
-        <div class="panel-body">
-            <a href="{{ url_for('usTrend_func') }}" style="font-size:larger">
-            <img src="/static/1.png" class="img-responsive" style="width:100%" alt="Image">
-            </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="panel">
-        <div class="panel-body">
-            <a href="{{ url_for('indiaTrend_func') }}">
-                <img src="/static/5.png" class="img-responsive" style="width:100%" alt="Image">
-            </a>
-        </div>
-      </div>
-    </div>
- </div>
-
-<div class="row">
-    <div class="col-sm-6">
-      <div class="panel">
-        <div class="panel-body">
-            <a href="{{ url_for('canadaTrend_func') }}" style="font-size:larger">
-            <img src="/static/2.png" class="img-responsive" style="width:100%" alt="Image">
-            </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="panel">
-        <div class="panel-body">
-            <a href="{{ url_for('mexicoTrend_func') }}">
-                <img src="/static/4.png" class="img-responsive" style="width:100%" alt="Image">
-            </a>
-        </div>
-      </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-6">
-        <div class="panel" align="center">
-            <div class="panel-body">
-                <a href="{{ url_for('koreaTrend_func') }}">
-                    <img src="/static/3.png" class="img-responsive" style="width:100%" alt="Image">
-                </a>
+    <div class="row">
+        <div class="col-sm-8" align="center">
+            <div class="panel" align="center">
+                <div class="panel-body">
+                    <a href="{{ url_for('getIdForSentimentAnalysis_func') }}" class="link">
+                        <img src="/static/dreamstime_m_84077387.jpg" class="index-img" style="width:100%" alt="Image">
+                        <div class="middle">Sentimental analysis</div>
+                        <div class="overlay">Find out what everyone feels about a video</div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
-</div><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="panel" align="center">
+                <div class="panel-body">
+                    <a href="{{ url_for('countries_func') }}" class="link">
+                        <img src="/static/dreamstime_m_84077387.jpg" class="index-img" style="width:100%" alt="Image">
+                        <div class="middle">Check out analyzed data</div>
+                        <div class="overlay">
+                                Click here to view trending videos by countries
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
 
 
 {% endblock %}

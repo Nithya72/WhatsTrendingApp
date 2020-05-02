@@ -2,11 +2,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div><h2>US - Youtube Trending Results</h2></div>
-{% for elem in graph %}
-<div class="plots-{{elem[1]}}">
-    {{elem[0]|safe}}
+<div class="container">
+        <div align="center">
+            <h2>USA - Youtube Trending Results</h2>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+
+        {% for elem in graph %}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="plots" align="center">
+                     {{ elem | safe}}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
 </div>
-{% endfor %}
 
 {% endblock %}

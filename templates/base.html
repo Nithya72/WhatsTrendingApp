@@ -16,12 +16,21 @@
 
 {% block navbar %}
 <div class="container">
-   <nav class="navbar">
+   <nav class="navbar navbar-default">
        <div class="jumbotron text-center" style="background: tomato; color: white">
            <h1>
                <span class="glyphicon glyphicon-expand" aria-hidden="true" style="top:5px"></span>
                What's Trending
            </h1>
+           {% if not noHomePageLink %}
+           <h4>
+               Trends by :
+               <a href="/" style="color: white">Home</a> |
+               <a href="/" style="color: white">Category</a> |
+               <a href="/" style="color: white">Tags</a> |
+               <a href="/" style="color: white">Publish hour</a>
+           </h4>
+           {%  endif %}
        </div>
    </nav>
 </div>

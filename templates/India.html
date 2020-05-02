@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div><h2>India - Youtube Trending Results</h2></div>
+<div class="container">
+    <div align="center">
+        <h2>India - Youtube Trending Results</h2>
+    </div>
+    <br/>
+    <br/>
+    <br/>
 
-<form action="{{ url_for('video_id') }}" method="post">
-    <input type="text" name="videoId">
-    <input type="submit">
-</form>
-
-{% if graph %}
-{% for elem in graph %}
-<div class="plots">
-    {{elem|safe}}
+     {% for elem in graph %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="plots"  align="center">
+                {{elem|safe}}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 </div>
-{% endfor %}
-{% endif %}
 
 {% endblock %}

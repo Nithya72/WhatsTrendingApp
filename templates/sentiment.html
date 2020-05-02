@@ -1,0 +1,21 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container">
+        <div align="center">
+            <h1>Upload your dataset</h1>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                {{ graph[0] | safe }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
