@@ -56,11 +56,11 @@ def indiaTrend_func():
 
 @app.route("/mexicoTrend")
 def mexicoTrend_func():
-    dataFormatter.processData("./dataset/MXvideos.csv", './dataset/MX_category_id.json', 'FR')
-    df = pd.read_csv("./transformed/KR_trending_videos.csv")
+    dataFormatter.processData("./dataset/MX_trending.csv", './dataset/MX_category_id.json', 'MX')
+    df = pd.read_csv("./transformed/MX_trending_videos.csv")
     html_text = [showTrending.plot_category(df), showTrending.plot_publish_hours(df),
                  showTrending.plot_tags_word_cloud(df)]
-    return render_template("Mexico.html", title="Mexico")
+    return render_template("Mexico.html", title="Mexico", graph=html_text)
 
 
 @app.route("/koreaTrend")
@@ -88,7 +88,7 @@ def gbTrend_func():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=80)
+    #app.run(host='0.0.0.0', debug=True, port=80)
     app.jinja_env.auto_reload = True
     app.run(debug=True)
     app.config(TEMPLATES_AUTO_RELOAD=True)
