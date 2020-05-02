@@ -14,3 +14,57 @@ div.plots-cloud .mpld3-yaxis {
 div.plots-cloud .mpld3-yaxis{
     display: none;
 }
+
+.index-img {
+  opacity: 0.5;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  color: red;
+  font-size: 30px;
+  transition: .5s ease;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .index-img {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 0.3;
+}
+
+.text {
+  color: red;
+  font-size: 20px;
+  padding: 16px 32px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all .5s;
+  overflow: hidden;
+  height: 0;
+  background: aquamarine;
+  text-align: center;
+  font-size: 30px;
+}
+
+.container:hover .overlay,
+.container:hover {
+  height: 30%;
+}
