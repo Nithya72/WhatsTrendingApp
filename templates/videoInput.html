@@ -31,9 +31,9 @@
     <br/>
     <br/>
     {% if graph %}
-    <div class="container">
-        <div class="plots">
-            {{graph[0] |safe}}
+    <div class="container" align="center">
+        <div class="plots-{{graph[0][1]}}">
+            {{graph[0][0] |safe}}
         </div>
     </div>
     {% endif %}
