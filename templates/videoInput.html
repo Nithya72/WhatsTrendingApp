@@ -4,22 +4,25 @@
 
     <div class="container">
         <div align="center">
-            <h1>Upload your dataset</h1>
+            <h1>Check sentimental analysis for your video</h1>
         </div>
     </div>
     <br/>
     <br/>
     <br/>
-    <div class="container">
+    <div class="container text-center">
         <div class="row">
-            <div class="col-sm-8">
-                <form action="{{ url_for('sentimentAnalysis')}}" method="post">
-                      <div class="form-group">
-                        <label for="videoid">Video Id:</label>
-                        <input type="text" name="videoId" class="form-control" placeholder="Enter youtube video id" id="videoid">
-                      </div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+            <div class="col-sm-8" style="margin-left: 200px">
+                <h3>
+                    <form action="{{ url_for('sentimentAnalysis')}}" method="post">
+                          <div class="form-group">
+                            <label for="videoid">Video Id:</label>
+                            <input type="text" name="videoId" class="form-control" placeholder="Enter youtube video id" id="videoid">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </h3>
+
             </div>
         </div>
     </div>
