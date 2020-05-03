@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
+<div class="container" style="margin-bottom: 50px">
 </br>
 <h2 align="center">
     What's trending is intended to help Youtubers in different regions of the country visualize what type of content is the most popular in their country.
@@ -12,22 +12,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-8" align="center">
-            <div class="panel" align="center">
-                <div class="panel-body">
-                    <a href="{{ url_for('getIdForSentimentAnalysis_func') }}" class="link">
-                        <img src="/static/dreamstime_m_84077387.jpg" class="index-img" style="width:100%" alt="Image">
-                        <div class="middle">Sentimental analysis</div>
-                        <div class="overlay">Find out what everyone feels about a video</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-8" style="margin-left: 200px">
             <div class="panel" align="center">
                 <div class="panel-body">
                     <a href="{{ url_for('countries_func') }}" class="link">
@@ -42,6 +27,22 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8" style="margin-left: 200px">
+            <div class="panel" align="center">
+                <div class="panel-body">
+                    <a href="{{ url_for('getIdForSentimentAnalysis_func') }}" class="link">
+                        <img src="/static/dreamstime_m_84077387.jpg" class="index-img" style="width:100%" alt="Image">
+                        <div class="middle">Sentimental analysis</div>
+                        <div class="overlay">Find out what everyone feels about a video</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <br><br>
 
