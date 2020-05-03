@@ -1,6 +1,11 @@
 # **What's Trending?**
 ## **Description**
-What's Trending is intended to help Youtubers from different regions visualize what type of content is the most popular in their country. Our application is using the data set from the ["Trending Youtube Video Statistics"](https://www.kaggle.com/datasnaek/youtube-new) Kaggle competition that has scraped data from several countries across the span of 6 months with 200 listings of trending videos daily. All data was captured in the same time frame. In our application, we analyzed the data sets from the USA, India, Mexico and Korea. 
+#### **Idea Description:** 
+What's trending is intended to help Youtubers in different regions of the country visualize what type of content is the most popular in their country. Our team will acquire data from the top trending Youtube videos from different countries to form visual statistics of what category is the most viewed video.<br>
+
+#### **Goal of the project:**
+The goal of this project will be to present live data from Youtube's top trending video to help new content creators that would like to use this platform. We will build a website that will show the most viewed, liked, disliked, and comment counts in a visual representation for users that would like information on how to build their Youtube career in their desginated country. Our team will also build a sentiment analysis in a variety of forms to determine how the viewers of these videos felt, whether it be positive, negative, or neutral.
+Technology stack: Flask, AWS, Machine Learning algorithm(NLTK SentimentIntensityAnalyzer), Python, Matplotlib, Seaborn, JSON, HTML/CSS, Bootstrap
 
 
 ## **Set up virtual environment**
