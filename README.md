@@ -7,6 +7,7 @@ What's Trending is intended to help Youtubers from different regions visualize w
 This contains all the packages and dependencies used. 
 ```
 source venv/bin/activate
+venv\Scripts\activate
 ```
 
 If you don't need view website on localhost anymore, deactivate the virtual environment. 
@@ -19,6 +20,7 @@ deactivate
 Now that the virtual environment is activated, you can run view the website on localhost:5000. 
 ```
 python3 main.py
+python main.py
 ```
 
 ## Build & Run Docker Image 
