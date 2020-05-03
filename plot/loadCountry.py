@@ -22,7 +22,7 @@ def getCategoryDesc(country):
     elif (country == "CA"):
         description = 'Videos of category Entertainment are the most trending in CA'
     elif (country == "UK"):
-        description = 'Videos of category Entertainment are the most trending in UK'
+        description = 'Videos of category Music are the most trending in UK'
     elif (country == "FR"):
         description = 'Videos of category Entertainment are the most trending in FR'
     elif (country == "DE"):
@@ -35,17 +35,17 @@ def getCategoryDesc(country):
 def getPublishHour(country):
     description = ''
     if (country == "US"):
-        description = 'Videos published in this hour are the most trending in US'
+        description = 'Videos published at 4:00PM hour are the most trending in US'
     elif (country == "CA"):
-        description = 'Videos of category Entertainment are the most trending in CA'
+        description = 'Videos published at 4:00PM are the most trending in CA'
     elif (country == "UK"):
-        description = 'Videos of category Entertainment are the most trending in UK'
+        description = 'Videos published at 5:00PM are the most trending in UK'
     elif (country == "FR"):
-        description = 'Videos of category Entertainment are the most trending in FR'
+        description = 'Videos published at 4:00PM are the most trending in FR'
     elif (country == "DE"):
-        description = 'Videos of category Entertainment are the most trending in DE'
+        description = 'Videos published at 5:00PM are the most trending in DE'
     elif (country == "MX"):
-        description = 'Videos of category Entertainment are the most trending in MX'
+        description = 'Videos published at 5:00PM are the most trending in MX'
     return description
 
 
