@@ -1,10 +1,14 @@
 wheel
 flask
 flask_bootstrap
+google-api-python-client
+httplib2
 jinja2 
 matplotlib 
 mpld3
+nltk
 numpy
+oauth2client
 pandas
 seaborn
 scipy

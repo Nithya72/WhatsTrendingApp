@@ -88,7 +88,7 @@ def gbTrend_func():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=80)
+    app.run(host='0.0.0.0', debug=True, port=8000)
     app.jinja_env.auto_reload = True
     app.run(debug=True)
     app.config(TEMPLATES_AUTO_RELOAD=True)
