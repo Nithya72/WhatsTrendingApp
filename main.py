@@ -24,7 +24,7 @@ def getIdForSentimentAnalysis_func():
 @app.route("/sentiment", methods=["POST"])
 def sentimentAnalysis():
     videoId = request.form['videoId']
-    html_text = [sentiment.get_videoid(videoId)]
+    html_text = [(sentiment.get_videoid(videoId), "senti")]
     return render_template("videoInput.html", title="Sentimental Analysis", graph=html_text)
 
 
