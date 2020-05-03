@@ -22,14 +22,14 @@
                <span class="glyphicon glyphicon-expand" aria-hidden="true" style="top:5px"></span>
                What's Trending
            </h1>
-           {% if not noHomePageLink %}
-           <h4>
-               Trends by :
-               <a href="/" style="color: white">Home</a> |
-               <a href="/" style="color: white">Category</a> |
-               <a href="/" style="color: white">Tags</a> |
-               <a href="/" style="color: white">Publish hour</a>
-           </h4>
+           {% if showNavBar %}
+           <h3>
+               <a href="/" style="color: white">Dataset</a>  |
+                 Trends by :
+               <a href="{{ url_for('showCategory', country=country) }}" style="color: white">Category</a> |
+               <a href="{{ url_for('showWordTags', country=country) }}" style="color: white">Tags</a> |
+               <a href="{{ url_for('showPublishHour', country=country) }}" style="color: white">Publish hour</a>
+           </h3>
            {%  endif %}
        </div>
    </nav>

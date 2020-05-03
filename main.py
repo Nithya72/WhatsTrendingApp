@@ -1,7 +1,8 @@
-from flask import Flask, send_file, render_template, request
+from flask import Flask, send_file, render_template, request, redirect
 from plot import usaTrending
 from plot import showTrending
 from plot import sentiment
+from plot import loadCountry
 from flask_bootstrap import Bootstrap
 from plot import dataFormatter
 import pandas as pd
@@ -17,7 +18,7 @@ def home():
 
 @app.route("/videoInput")
 def getIdForSentimentAnalysis_func():
-    return render_template("videoInput.html", title='Analyze your data set')
+    return render_template("videoInput.html", title='Sentimental Analysis')
 
 
 @app.route("/sentiment", methods=["POST"])
@@ -32,59 +33,42 @@ def countries_func():
     return render_template("countries.html", title='Countries')
 
 
-@app.route("/usTrend")
-def usTrend_func():
-    html_text = [usaTrending.plot_category(),
-                 usaTrending.plot_publish_hours(),
-                 usaTrending.plot_tags(),
-                 usaTrending.plot_tags_word_cloud(), "cloud"]
-    return render_template("US.html", title="United States", graph=html_text)
-
-@app.route("/canadaTrend")
-def canadaTrend_func():
-    return render_template("Canada.html", title="Canada")
+@app.route("/countries/<country>")
+def load_country_func(country):
+    return redirect('/countries/' + country + "/category")
 
 
-@app.route("/indiaTrend")
-def indiaTrend_func():
-    dataFormatter.processData("./dataset/INvideos.csv", './dataset/IN_category_id.json', 'IN')
-    df = pd.read_csv("./transformed/IN_trending_videos.csv")
-    html_text = [showTrending.plot_category(df), showTrending.plot_publish_hours(df),
-                 showTrending.plot_tags_word_cloud(df)]
-    return render_template("India.html", title="India")
+@app.route("/countries/<country>/category")
+def showCategory(country):
+    df = loadCountry.getCountryData(country)
+    desc = loadCountry.getCategoryDesc(country)
+    if (country == "US"):
+        html_graph = [showTrending.plot_title(df)]
+    else:
+        html_graph = [showTrending.plot_category(df)]
+    return render_template("category.html", title="Category", graph=html_graph, analysis=desc, showNavBar='true', country=country)
 
 
-@app.route("/mexicoTrend")
-def mexicoTrend_func():
-    dataFormatter.processData("./dataset/MX_trending.csv", './dataset/MX_category_id.json', 'MX')
-    df = pd.read_csv("./transformed/MX_trending_videos.csv")
-    html_text = [showTrending.plot_category(df), showTrending.plot_publish_hours(df),
-                 showTrending.plot_tags_word_cloud(df)]
-    return render_template("Mexico.html", title="Mexico", graph=html_text)
+@app.route("/countries/<country>/wordTags")
+def showWordTags(country):
+    df = loadCountry.getCountryData(country)
+    html_graph = [showTrending.plot_tags_word_cloud(df)]
+    return render_template("tagword.html", title=country, graph=html_graph, showNavBar='true', country=country)
 
 
-@app.route("/koreaTrend")
-def koreaTrend_func():
-    dataFormatter.processData("./dataset/KRvideos.csv", './dataset/KR_category_id.json', 'KR')
-    df = pd.read_csv("./transformed/KR_trending_videos.csv")
-    html_text = [showTrending.plot_category(df), showTrending.plot_publish_hours(df),
-                 showTrending.plot_tags_word_cloud(df)]
-    return render_template("Korea.html", title="Korea")
+@app.route("/countries/<country>/publishHour")
+def showPublishHour(country):
+    df = loadCountry.getCountryData(country)
+    desc = loadCountry.getPublishHour(country)
+    html_graph = [showTrending.plot_publish_hours(df)]
+    return render_template("publishHour.html", title="Category", graph=html_graph, analysis=desc, showNavBar='true', country=country)
 
 
-@app.route("/franceTrend")
-def franceTrend_func():
-    dataFormatter.processData("./dataset/FRvideos.csv", './dataset/FR_category_id.json', 'FR')
-    df = pd.read_csv("./transformed/FR_trending_videos.csv")
-    html_text = [showTrending.plot_category(df), showTrending.plot_publish_hours(df), showTrending.plot_tags_word_cloud(df)]
-    return render_template("Mexico.html", title="Mexico", graph=html_text)
-
-@app.route("/gbTrend")
-def gbTrend_func():
-    dataFormatter.processData("./dataset/GBvideos.csv", './dataset/GB_category_id.json', 'GB')
-    df = pd.read_csv("./transformed/GB_trending_videos.csv")
-    html_text = [showTrending.plot_category(df), showTrending.plot_tags_word_cloud(df)]
-    return render_template("gb.html", title="Great Britain", graph=html_text)
+@app.route("/countries/<country>/tagCount")
+def showTagCount(country):
+    df = loadCountry.getCountryData(country)
+    html_graph = [showTrending.plot_title(df)]
+    return render_template("category.html", title="Category", graph=html_graph, analysis='', showNavBar='true', country=country)
 
 
 if __name__ == '__main__':

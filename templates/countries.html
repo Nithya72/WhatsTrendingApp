@@ -15,7 +15,7 @@
     <div class="col-sm-6">
       <div class="panel">
         <div class="panel-body">
-            <a href="{{ url_for('usTrend_func') }}" style="font-size:larger">
+            <a href="{{ url_for('load_country_func', country='US') }}" style="font-size:larger">
             <img src="/static/usa.png" class="img-responsive" style="width:100%" alt="Image" title="USA">
             </a>
         </div>
@@ -24,8 +24,8 @@
     <div class="col-sm-6">
       <div class="panel">
         <div class="panel-body">
-            <a href="{{ url_for('indiaTrend_func') }}">
-                <img src="/static/india.png" class="img-responsive" style="width:100%" alt="Image" title="USA">
+            <a href="{{ url_for('load_country_func', country='CA') }}" style="font-size:larger">
+                <img src="/static/canada.png" class="img-responsive" style="width:100%" alt="Image" title="Canada">
             </a>
         </div>
       </div>
@@ -36,8 +36,8 @@
     <div class="col-sm-6">
       <div class="panel">
         <div class="panel-body">
-            <a href="{{ url_for('canadaTrend_func') }}" style="font-size:larger">
-            <img src="/static/canada.png" class="img-responsive" style="width:100%" alt="Image" title="Canada">
+            <a href="{{ url_for('load_country_func', country='UK') }}">
+                <img src="/static/UK.png" class="img-responsive" style="width:100%" alt="Image" title="UK">
             </a>
         </div>
       </div>
@@ -45,9 +45,10 @@
     <div class="col-sm-6">
       <div class="panel">
         <div class="panel-body">
-            <a href="{{ url_for('mexicoTrend_func') }}">
-                <img src="/static/mexico.png" class="img-responsive" style="width:100%" alt="Image" title="Mexico">
+            <a href="{{ url_for('load_country_func', country='FR') }}">
+                <img src="/static/France.png" class="img-responsive" style="width:100%" alt="Image" title="France">
             </a>
+
         </div>
       </div>
     </div>
@@ -56,8 +57,8 @@
     <div class="col-sm-6">
         <div class="panel" align="center">
             <div class="panel-body">
-                <a href="{{ url_for('koreaTrend_func') }}">
-                    <img src="/static/korea.png" class="img-responsive" style="width:100%" alt="Image" title="Korea">
+                <a href="{{ url_for('load_country_func', country='MX') }}">
+                    <img src="/static/mexico.png" class="img-responsive" style="width:100%" alt="Image" title="Mexico">
                 </a>
             </div>
         </div>
@@ -65,8 +66,8 @@
     <div class="col-sm-6">
         <div class="panel" align="center">
             <div class="panel-body">
-                <a href="{{ url_for('gbTrend_func') }}">
-                    <img src="/static/korea.png" class="img-responsive" style="width:100%" alt="Image" title="Great Britian">
+                <a href="{{ url_for('load_country_func', country='DE') }}">
+                    <img src="/static/Germany.png" class="img-responsive" style="width:100%" alt="Image" title="Germany">
                 </a>
             </div>
         </div>
