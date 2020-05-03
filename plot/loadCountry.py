@@ -20,15 +20,15 @@ def getCategoryDesc(country):
     if (country == "US"):
         description = 'Videos of category Entertainment are the most trending in US'
     elif (country == "CA"):
-        description = ''
+        description = 'Videos of category Entertainment are the most trending in CA'
     elif (country == "UK"):
-        description = ''
+        description = 'Videos of category Entertainment are the most trending in UK'
     elif (country == "FR"):
-        description = ''
+        description = 'Videos of category Entertainment are the most trending in FR'
     elif (country == "DE"):
-        description = ''
+        description = 'Videos of category Entertainment are the most trending in DE'
     elif (country == "MX"):
-        description = ''
+        description = 'Videos of category Entertainment are the most trending in MX'
     return description
 
 
@@ -37,15 +37,15 @@ def getPublishHour(country):
     if (country == "US"):
         description = 'Videos published in this hour are the most trending in US'
     elif (country == "CA"):
-        description = ''
+        description = 'Videos of category Entertainment are the most trending in CA'
     elif (country == "UK"):
-        description = ''
+        description = 'Videos of category Entertainment are the most trending in UK'
     elif (country == "FR"):
-        description = ''
+        description = 'Videos of category Entertainment are the most trending in FR'
     elif (country == "DE"):
-        description = ''
+        description = 'Videos of category Entertainment are the most trending in DE'
     elif (country == "MX"):
-        description = ''
+        description = 'Videos of category Entertainment are the most trending in MX'
     return description
 
 
