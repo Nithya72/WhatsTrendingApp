@@ -87,3 +87,17 @@ div.plots-hrs .mpld3-yaxis .tick, div.plots-tags .mpld3-yaxis .tick{
 .container:hover {
   height: 10%;
 }
+
+
+.icon_row {
+  width: 500px; 
+  margin: auto; 
+}
+
+#dataset_icon {
+  width: 250px; 
+  height: auto; 
+  float: left; 
+  background-color: thistle;
+  font-size: 30px;
+}

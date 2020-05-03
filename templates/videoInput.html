@@ -3,8 +3,14 @@
 {% block content %}
 
     <div class="container">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+            .description { 
+                font-family: 'Raleway', sans-serif;
+            }
+        </style>
         <div align="center">
-            <h1>Check sentimental analysis for your video</h1>
+            <h1 class="description">View the sentimental analysis of a video</h1>
         </div>
     </div>
     <br/>
@@ -16,7 +22,7 @@
                 <h3>
                     <form action="{{ url_for('sentimentAnalysis')}}" method="post">
                           <div class="form-group">
-                            <label for="videoid">Video Id:</label>
+                            <label class="description" for="videoid">Video Id:</label>
                             <input type="text" name="videoId" class="form-control" placeholder="Enter youtube video id" id="videoid">
                           </div>
                           <button type="submit" class="btn btn-primary">Submit</button>
