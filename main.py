@@ -43,9 +43,9 @@ def showCategory(country):
     df = loadCountry.getCountryData(country)
     desc = loadCountry.getCategoryDesc(country)
     if (country == "US" or country == "MX"):
-        html_graph = [showTrending.plot_title(df)]
+        html_graph = [(showTrending.plot_title(df), "cat")]
     else:
-        html_graph = [showTrending.plot_category(df)]
+        html_graph = [(showTrending.plot_category(df), "cat")]
     return render_template("category.html", title="Category", graph=html_graph, analysis=desc, country=country)
 
 
