@@ -1,6 +1,8 @@
 .navbar{
     background: tomato;
     color: white;
+    margin-bottom: 50px;
+    border-radius: 0;
 }
 
 div.plots-cloud .mpld3-yaxis, div.plots-cloud .mpld3-xaxis {

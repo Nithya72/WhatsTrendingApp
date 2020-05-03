@@ -3,16 +3,15 @@
 
 {% block content %}
 
-    <div class="container">
+    <div class="container" style="margin-top: 50px; margin-bottom: 100px">
         <div align="center">
             <h2>{{ analysis }}</h2>
         </div>
-        <br/>
-        <br/>
-        <br/>
+    </div>
+    <div class="container" style="margin-bottom: 100px">
         <div class="row">
             <div class="col-md-12">
-                <div class="plots" align="center">
+                <div class="plots" >
                     {{graph[0] | safe}}
                 </div>
             </div>
