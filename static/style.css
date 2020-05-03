@@ -24,19 +24,31 @@ div.plots-hrs .mpld3-yaxis .tick, div.plots-tags .mpld3-yaxis .tick{
 
 
 .index-img {
-  opacity: 0.5;
+  opacity: 1;
   display: block;
-  width: 100%;
+  max-width: 60% !important; 
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
 }
 
-.middle {
+/* .middle {
   color: red;
   font-size: 30px;
   transition: .5s ease;
   opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+} */
+
+.middle {
+  font-size: 20px;
+  transition: .5s ease;
+  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -50,7 +62,7 @@ div.plots-hrs .mpld3-yaxis .tick, div.plots-tags .mpld3-yaxis .tick{
 }
 
 .container:hover .middle {
-  opacity: 0.3;
+  opacity: 1;
 }
 
 .text {
@@ -67,12 +79,11 @@ div.plots-hrs .mpld3-yaxis .tick, div.plots-tags .mpld3-yaxis .tick{
   transition: all .5s;
   overflow: hidden;
   height: 0;
-  background: aquamarine;
   text-align: center;
   font-size: 30px;
 }
 
 .container:hover .overlay,
 .container:hover {
-  height: 30%;
+  height: 10%;
 }

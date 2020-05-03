@@ -72,7 +72,7 @@ def showTagCount(country):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=8000)
+    app.run(host='127.0.0.1', debug=True, port=8000)
     app.jinja_env.auto_reload = True
     app.run(debug=True)
     app.config(TEMPLATES_AUTO_RELOAD=True)

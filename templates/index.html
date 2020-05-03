@@ -1,26 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container" style="margin-bottom: 50px">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+        h2.description { 
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
 </br>
-<h2 align="center">
-    What's trending is intended to help Youtubers in different regions of the country visualize what type of content is the most popular in their country.
-    Our team will acquire data from the top trending Youtube videos from different countries to form visual statistics of what category is the most viewed video.
+<h2 align="center", class="description">
+    Our application is intended to help Youtubers across the world visualize the type of content that is most popular in their country.
+    The team has acquired data of top trending Youtube videos from different countries to form visual statistics of which category attracts the most attention.
 </h2>
     <br/>
     <br/>
 </div>
 
 <div class="container">
+    <style>
+        .icon {
+            padding: 16px 32px;
+            color: white;
+        }
+        @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+        h2.description { 
+            font-family: 'Raleway', sans-serif;
+        }
+    </style> 
     <div class="row">
         <div class="col-sm-8" style="margin-left: 200px">
             <div class="panel" align="center">
                 <div class="panel-body">
                     <a href="{{ url_for('countries_func') }}" class="link">
-                        <img src="/static/dreamstime_m_84077387.jpg" class="index-img" style="width:100%" alt="Image">
-                        <div class="middle">Check out analyzed data</div>
-                        <div class="overlay">
-                                Click here to view trending videos by countries
-                        </div>
+                        <img src="/static/analysis.png" class="index-img" style="width:100%" alt="Image">
+                        <h2 class="middle description">Data Set Analysis</h2> 
+                        <!-- <div class="overlay">Data Set Analysis</div> -->
                     </a>
                 </div>
             </div>
@@ -33,15 +47,17 @@
             <div class="panel" align="center">
                 <div class="panel-body">
                     <a href="{{ url_for('getIdForSentimentAnalysis_func') }}" class="link">
-                        <img src="/static/dreamstime_m_84077387.jpg" class="index-img" style="width:100%" alt="Image">
-                        <div class="middle">Sentimental analysis</div>
-                        <div class="overlay">Find out what everyone feels about a video</div>
+                        <img src="/static/sentimental.png" class="index-img" style="width:100%" alt="Image">
+                        <h2 class="middle description">Sentimental Analysis</h2>
+                        <!-- <div class="overlay">Sentimental Analysis</div> -->
                     </a>
+                    
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 <br><br>

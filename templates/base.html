@@ -1,6 +1,8 @@
 {% extends "bootstrap/base.html" %}
 {% if title %}
-    <title>{{ title }} - What's Trending?</title>
+    <title>
+        {{ title }} - What's Trending? 
+    </title>
 {% else %}
     <title>What's Trending?</title>
 {% endif %}
@@ -18,10 +20,17 @@
 <div class="container">
 {#   <nav class="navbar navbar-default">#}
        <div class="jumbotron text-center" style="background: tomato; color: white;margin-bottom: 0;border-radius: 0">
-           <h1>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+                h1.logo  {
+                    font-family: 'Squada One', cursive;
+                    font-size: 85px;
+                }
+            </style> 
+            <h1 class="logo">
                <span class="glyphicon glyphicon-expand" aria-hidden="true" style="top:5px"></span>
-               What's Trending
-           </h1>
+               What's Trending ?
+            </h1>
        </div>
 
         <nav class="navbar">
