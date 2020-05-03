@@ -42,7 +42,7 @@ def load_country_func(country):
 def showCategory(country):
     df = loadCountry.getCountryData(country)
     desc = loadCountry.getCategoryDesc(country)
-    if (country == "US"):
+    if (country == "US" or country == "MX"):
         html_graph = [showTrending.plot_title(df)]
     else:
         html_graph = [showTrending.plot_category(df)]
