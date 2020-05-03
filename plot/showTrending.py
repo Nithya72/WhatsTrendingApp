@@ -12,12 +12,9 @@ from wordcloud import WordCloud, STOPWORDS
 
 
 def plot_category(df):
-    fig = plt.figure(figsize=(14, 4))
+    fig = plt.figure(figsize=(10, 4))
     output = sb.countplot(x='category', data=df, palette="Blues_d", order=df['category'].value_counts().index)
-    output.set_xticklabels(output.get_xticklabels(), rotation=45, ha="right")
-    plt.tick_params(rotation=45)
-    plt.xticks(rotation=45)
-    # output.set_title("Trending Video Categories", fontsize=20)
+    output.set_xlabel("", fontsize=12)
     output.set_ylabel("Trending Videos Count", fontsize=12)
     plt.subplots_adjust(wspace=0.9, hspace=0.9, top=0.9)
     return mpld3.fig_to_html(fig)
@@ -26,10 +23,7 @@ def plot_category(df):
 def plot_title(df):
     fig = plt.figure(figsize=(10, 4))
     output = sb.countplot(x='title_id', data=df, palette="Blues_d", order=df['title_id'].value_counts().index)
-    output.set_xticklabels(output.get_xticklabels(), rotation=45, ha="right")
-    plt.tick_params(rotation=45)
-    plt.xticks(rotation=45)
-    # output.set_title("Trending Video Categories", fontsize=20)
+    output.set_xlabel("", fontsize=12)
     output.set_ylabel("Trending Videos Count", fontsize=12)
     plt.subplots_adjust(wspace=0.9, hspace=0.9, top=0.9)
     return mpld3.fig_to_html(fig)
