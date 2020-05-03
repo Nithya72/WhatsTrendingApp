@@ -11,8 +11,8 @@
     <div class="container" style="margin-bottom: 100px">
         <div class="row">
             <div class="col-md-12">
-                <div class="plots" >
-                    {{graph[0] | safe}}
+                <div class="plots-{{graph[0][1]}}" >
+                    {{graph[0][0] | safe}}
                 </div>
             </div>
         </div>
