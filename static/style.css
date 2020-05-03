@@ -5,17 +5,13 @@
     border-radius: 0;
 }
 
-div.plots-cloud .mpld3-yaxis, div.plots-cloud .mpld3-xaxis {
+div.plots-cloud .mpld3-yaxis, div.plots-cloud .mpld3-xaxis, div.plots-senti .mpld3-xaxis, div.plots-senti .mpld3-yaxis{
+    display: none;
+}
+div.plots-hrs .mpld3-yaxis .tick, div.plots-tags .mpld3-yaxis .tick{
     display: none;
 }
 
-div.plots-cloud .mpld3-yaxis {
-    display: none;
-}
-
-div.plots-cloud .mpld3-yaxis{
-    display: none;
-}
 
 .index-img {
   opacity: 0.5;
