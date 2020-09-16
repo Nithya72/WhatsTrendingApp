@@ -43,19 +43,12 @@ Good, aggressive, vulnerable, responsible, careful, healthy,  etc.
 Github, Flask, AWS, Docker, Nginx, Youtube Data API v3, Machine Learning algorithm (NLTK Vader SentimentIntensityAnalyzer), Python, Matplotlib, Seaborn, HTML/CSS, Bootstrap
 
 
-## **View website**
-The docker daemon is running the website on the AWS EC2 Instance. The webpage will be viewable at the Elastic IP 52.88.197.158:80 
-```
-52.88.197.158:80
-```
-
 # **Notes To Run The Application**
 
 ## **Set up virtual environment**
 This contains all the packages and dependencies used. 
 ```
 source venv/bin/activate
-venv\Scripts\activate
 ```
 
 If you don't need view website on localhost anymore, deactivate the virtual environment. 
